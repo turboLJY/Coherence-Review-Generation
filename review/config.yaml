@@ -1,0 +1,53 @@
+# general
+gpu_id: 3
+use_gpu: True
+seed: 19971003
+dataset: book
+reproducibility: True
+mode: test
+
+# dataset
+saved_dir: './ckpt'
+data_dir: './data'
+node_vocab: './data/book/node.pkl'
+token_vocab: './data/book/token.pkl'
+type_vocab: './data/book/type.pkl'
+relation_vocab: './data/book/relation.pkl'
+
+# transformer
+inference_layers: 4
+token_dim: 512
+ffn_embed_dim: 1024
+num_heads: 8
+
+# graph transformer
+node_dim: 512
+type_dim: 512
+graph_layers: 4
+
+# relation encoder
+rel_dim: 100
+path_encoding_method: rnn
+rnn_layers: 2
+hidden_size: 256
+bidirectional: True
+
+# training settings
+start_epoch: 0
+epochs: 200
+train_batch_size: 30
+learner: adamw
+lr: 0.0001
+dropout_ratio: 0.3
+weights_dropout: True
+
+# evaluation settings
+dev_batch_size: 20
+
+# testing settings
+saved_model: './ckpt/book/198/model.bin'
+test_batch_size: 20
+decode_strategy: topk_sampling
+beam_size: 4
+max_time_step: 50
+output_dir: './ckpt/book/126'
