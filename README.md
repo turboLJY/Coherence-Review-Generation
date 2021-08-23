@@ -5,8 +5,6 @@ Coda and Data source for the SIGIR 2021 paper "[Knowledge-based Review Generatio
 
 - [Requirements](#Requirements)
 - [Datasets](#Datasets)
-- [Training Instructions](#Training-Instructions)
-- [Testing Instructions](#Testing-Instructions)
 - [License](#License)
 - [Reference](#References)
 
